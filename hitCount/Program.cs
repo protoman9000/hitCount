@@ -10,15 +10,16 @@ namespace hitCount
     {
         static void Main(string[] args)
         {
-            Random die = new Random();
-            int enemy = 3;
-            int attackNow = 0;
+            Random die = new Random();   //new die
+            int enemy = 3;               //enemy health
+            int attackNow = 0;           //total attack points
 
             int dieNumber = die.Next(1, 5);
             int attack = dieNumber;
             attackNow += attack;
             dieNumber = die.Next(1, 5);
-            while (dieNumber > attack)
+            
+            while (dieNumber > attack)   //If the next roll is higher than last, adds to the total. 
             {
                 attackNow += attack;
                 attack = dieNumber;
