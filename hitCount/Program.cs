@@ -11,7 +11,7 @@ namespace hitCount
         static void Main(string[] args)
         {
             Random die = new Random();
-            int enemy = 1;
+            int enemy = 3;
             int attackNow = 0;
 
             int dieNumber = die.Next(1, 5);
@@ -27,7 +27,7 @@ namespace hitCount
 
             int result = enemy - attackNow;
 
-            if (enemy <= 0)
+            if (result <= 0)
                 Console.WriteLine("The enemy is defeated");
             else
                 Console.WriteLine("You lost, try again");
