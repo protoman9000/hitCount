@@ -21,7 +21,7 @@ namespace hitCount
             
             while (dieNumber > attack)   //If the next roll is higher than last, adds to the total. 
             {
-                attackNow += attack;
+                attackNow += dieNumber;
                 attack = dieNumber;
                 dieNumber = die.Next(1, 5);
             }
